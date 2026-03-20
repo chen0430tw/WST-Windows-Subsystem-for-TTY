@@ -8,26 +8,20 @@ use crossterm::{
 };
 use ratatui::{
     backend::CrosstermBackend,
-    layout::{Alignment, Constraint, Direction, Layout},
+    layout::{Alignment, Constraint, Direction, Layout, Rect},
     style::{Color, Modifier, Style},
     text::{Line, Span},
-    widgets::{Block, Borders, List, ListItem, Paragraph},
+    widgets::Paragraph,
     Frame, Terminal,
 };
 use std::io;
 use std::time::Duration;
 use wst_config::WstConfig;
 use wst_core::WstCore;
-use wst_protocol::{BackendKind, SessionEvent};
+use wst_protocol::{BackendKind, SessionEvent, TaskStatus};
 
 const INPUT_PROMPT: &str = ">";
 const VERSION: &str = env!("CARGO_PKG_VERSION");
-
-#[derive(Clone, Copy, PartialEq)]
-enum Focus {
-    Input,
-    Output,
-}
 
 struct OutputLine {
     text: String,
@@ -66,7 +60,6 @@ struct AppState {
     input: String,
     cursor_position: usize,
     output: Vec<OutputLine>,
-    focus: Focus,
     running: bool,
     session_id: Option<u64>,
     scroll_offset: usize,
@@ -79,11 +72,7 @@ impl AppState {
             core,
             input: String::new(),
             cursor_position: 0,
-            output: vec![OutputLine::system(format!(
-                "WST v{} - Windows Subsystem for TTY",
-                VERSION
-            ))],
-            focus: Focus::Input,
+            output: vec![],
             running: true,
             session_id: None,
             scroll_offset: 0,
@@ -161,19 +150,17 @@ impl AppState {
             return;
         }
 
+        // Add command to output as if it was typed (like real terminal)
+        self.output.push(OutputLine::normal(format!("{} {}", INPUT_PROMPT, command)));
+
         // Check for builtin commands
         if command.starts_with(':') {
             self.handle_builtin(&command);
         } else {
-            // Execute via backend
-            self.output
-                .push(OutputLine::normal(format!("{} {}", INPUT_PROMPT, command)));
-
             match self.ensure_session() {
                 Ok(session) => match self.core.exec_with_session(session, command) {
-                    Ok(task_id) => {
-                        self.output
-                            .push(OutputLine::system(format!("[Task {} started]", task_id)));
+                    Ok(_task_id) => {
+                        // Task started, will poll for output
                     }
                     Err(e) => {
                         self.output.push(OutputLine::error(format!("Error: {}", e)));
@@ -206,31 +193,18 @@ impl AppState {
                 self.output.push(OutputLine::normal("  :exit / :q   - Exit WST"));
             }
             ":status" => {
-                self.output.push(OutputLine::system("WST Status:"));
-                self.output.push(OutputLine::normal(format!("  Version: {}", VERSION)));
-                self.output.push(OutputLine::normal(format!(
-                    "  Backend: {:?}",
-                    self.core.default_backend()
-                )));
+                self.output.push(OutputLine::system(format!("WST v{} - Windows Subsystem for TTY", VERSION)));
+                self.output.push(OutputLine::normal(format!("Backend: {:?}", self.core.default_backend())));
                 self.output
-                    .push(OutputLine::normal(format!("  Session: {:?}", self.session_id)));
-                self.output.push(OutputLine::normal(format!(
-                    "  History: {} commands",
-                    self.core.history().len()
-                )));
-                self.output.push(OutputLine::normal(format!(
-                    "  Fullscreen: {}",
-                    self.core.config().fullscreen
-                )));
+                    .push(OutputLine::normal(format!("Session: {:?}", self.session_id)));
                 self.output
-                    .push(OutputLine::normal(format!("  Hotkey: {}", self.core.config().hotkey)));
+                    .push(OutputLine::normal(format!("History: {} commands", self.core.history().len())));
             }
             ":clear" => {
                 self.output.clear();
                 self.scroll_offset = 0;
             }
             ":history" => {
-                self.output.push(OutputLine::system("Command History:"));
                 for (i, entry) in self.core.history().iter().enumerate() {
                     self.output
                         .push(OutputLine::normal(format!("  {}: {}", i + 1, entry.command)));
@@ -276,8 +250,7 @@ impl AppState {
             }
             _ => {
                 self.output.push(OutputLine::error(format!("Unknown builtin: {}", cmd)));
-                self.output
-                    .push(OutputLine::normal("Type :help for available commands"));
+                self.output.push(OutputLine::normal("Type :help for available commands"));
             }
         }
     }
@@ -298,8 +271,7 @@ impl AppState {
                 for event in events {
                     match event {
                         SessionEvent::SessionStarted(id) => {
-                            self.output
-                                .push(OutputLine::system(format!("Session {} started", id)));
+                            // Silent
                         }
                         SessionEvent::Output(chunk) => {
                             if chunk.is_stderr {
@@ -309,10 +281,15 @@ impl AppState {
                             }
                         }
                         SessionEvent::TaskUpdated { task_id, status } => {
-                            self.output.push(OutputLine::system(format!(
-                                "Task {} {:?}",
-                                task_id, status
-                            )));
+                            // Only show errors
+                            if let TaskStatus::Exited(code) = status {
+                                if code != 0 {
+                                    self.output.push(OutputLine::system(format!(
+                                        "Process exited with code {}",
+                                        code
+                                    )));
+                                }
+                            }
                         }
                     }
                 }
@@ -321,104 +298,49 @@ impl AppState {
     }
 
     fn scroll_to_bottom(&mut self) {
-        // Will be calculated based on output area size
         self.scroll_offset = self.output.len().saturating_sub(1);
+        if self.scroll_offset > 0 {
+            self.scroll_offset = self.output.len().saturating_sub(10);
+        }
     }
 }
 
 fn draw_ui(f: &mut Frame, state: &mut AppState) {
     let size = f.size();
 
-    // Main layout
-    let chunks = Layout::default()
-        .direction(Direction::Vertical)
-        .margin(1)
-        .constraints(
-            [
-                Constraint::Min(0),
-                Constraint::Length(3),
-                Constraint::Length(1),
-            ]
-            .as_ref(),
-        )
-        .split(size);
+    // Terminal style: full area for output + input
+    let main_area = size;
 
-    let output_area = chunks[0];
-    let input_area = chunks[1];
-    let status_area = chunks[2];
+    // Calculate how many lines we can show
+    let visible_lines = (main_area.height as usize).saturating_sub(2); // Leave space for input
 
-    // Draw output area
-    let output_lines: Vec<ListItem> = state
-        .output
-        .iter()
-        .skip(state.scroll_offset)
-        .map(|line| {
-            let style = if line.is_error {
-                Style::default().fg(Color::Red)
-            } else if line.is_system {
-                Style::default().fg(Color::Cyan).add_modifier(Modifier::DIM)
-            } else {
-                Style::default().fg(Color::Reset)
-            };
-            ListItem::new(line.text.as_str()).style(style)
-        })
-        .collect();
+    // Build terminal content (output lines + current input)
+    let mut terminal_lines: Vec<Line> = Vec::new();
 
-    let output = List::new(output_lines).block(
-        Block::default()
-            .borders(Borders::ALL)
-            .title(" Output "),
-    );
-    f.render_widget(output, output_area);
+    // Add output lines (from scroll offset)
+    for line in state.output.iter().skip(state.scroll_offset) {
+        let style = if line.is_error {
+            Style::default().fg(Color::Red)
+        } else if line.is_system {
+            Style::default().fg(Color::Cyan)
+        } else {
+            Style::default().fg(Color::Reset)
+        };
+        terminal_lines.push(Line::from(vec![Span::styled(&line.text, style)]));
+    }
 
-    // Draw input area
-    let input_text = vec![Line::from(vec![
+    // Add current input line
+    let input_line = vec![
         Span::styled(INPUT_PROMPT, Style::default().fg(Color::Green)),
         Span::raw(" "),
         Span::raw(&state.input),
-        Span::styled(" ", Style::default().fg(Color::DarkGray)), // Cursor placeholder
-    ])];
+    ];
+    terminal_lines.push(Line::from(input_line));
 
-    let input = Paragraph::new(input_text).block(
-        Block::default()
-            .borders(Borders::ALL)
-            .title(" Input "),
-    );
-    f.render_widget(input, input_area);
-
-    // Draw status bar
-    let backend_name = format!("{:?}", state.core.default_backend());
-    let status_text = vec![Line::from(vec![
-        Span::styled(
-            format!(" WST {} ", VERSION),
-            Style::default().fg(Color::Cyan).add_modifier(Modifier::BOLD),
-        ),
-        Span::raw(" | "),
-        Span::styled(
-            format!("Backend: {} ", backend_name),
-            Style::default().fg(Color::Yellow),
-        ),
-        Span::raw(" | "),
-        Span::styled(
-            format!("Session: {:?} ", state.session_id),
-            Style::default().fg(Color::Green),
-        ),
-        Span::raw(" | "),
-        Span::styled(
-            format!("History: {} ", state.core.history().len()),
-            Style::default().fg(Color::Blue),
-        ),
-        Span::raw(" | "),
-        Span::styled(
-            " Ctrl+C to exit ",
-            Style::default().fg(Color::DarkGray).add_modifier(Modifier::ITALIC),
-        ),
-    ])];
-
-    let status = Paragraph::new(status_text)
-        .alignment(Alignment::Left)
-        .style(Style::default().bg(Color::DarkGray));
-    f.render_widget(status, status_area);
+    // Render as a single paragraph (like a real terminal)
+    let terminal = Paragraph::new(terminal_lines)
+        .style(Style::default().bg(Color::Black).fg(Color::White));
+    f.render_widget(terminal, main_area);
 }
 
 fn run_app(
@@ -429,10 +351,8 @@ fn run_app(
     let tick_rate = Duration::from_millis(100);
 
     while state.running {
-        // Draw UI
         terminal.draw(|f| draw_ui(f, &mut state))?;
 
-        // Handle events
         let timeout = tick_rate.saturating_sub(last_tick.elapsed());
         if crossterm::event::poll(timeout)? {
             if let Event::Key(key) = event::read()? {
@@ -447,7 +367,6 @@ fn run_app(
             }
         }
 
-        // Tick for backend events
         if last_tick.elapsed() >= tick_rate {
             state.tick();
             last_tick = std::time::Instant::now();
@@ -458,23 +377,18 @@ fn run_app(
 }
 
 fn main() -> Result<()> {
-    // Load config
     let config = WstConfig::load_default()?;
 
-    // Setup terminal
     enable_raw_mode()?;
     let mut stdout = io::stdout();
     execute!(stdout, EnterAlternateScreen, EnableMouseCapture)?;
     let backend = CrosstermBackend::new(stdout);
     let mut terminal = Terminal::new(backend)?;
 
-    // Create app state
     let state = AppState::new(config)?;
 
-    // Run app
     let result = run_app(&mut terminal, state);
 
-    // Restore terminal
     disable_raw_mode()?;
     execute!(
         terminal.backend_mut(),
