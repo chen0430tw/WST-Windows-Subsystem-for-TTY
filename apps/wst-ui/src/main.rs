@@ -2,19 +2,20 @@ mod builtin;
 
 use anyhow::Result;
 use crossterm::{
-    event::{self, DisableMouseCapture, EnableMouseCapture, Event, KeyCode, KeyEvent, KeyModifiers},
+    event::{self, Event, KeyCode, KeyEvent, KeyModifiers},
     execute,
     terminal::{disable_raw_mode, enable_raw_mode, EnterAlternateScreen, LeaveAlternateScreen},
+    cursor::SetCursorStyle,
 };
 use ratatui::{
     backend::CrosstermBackend,
-    layout::{Alignment, Constraint, Direction, Layout, Rect},
+    layout::{Alignment, Constraint, Direction, Layout},
     style::{Color, Modifier, Style},
     text::{Line, Span},
-    widgets::Paragraph,
+    widgets::{Paragraph, Wrap},
     Frame, Terminal,
 };
-use std::io;
+use std::io::{self, Write};
 use std::time::Duration;
 use wst_config::WstConfig;
 use wst_core::WstCore;
@@ -63,6 +64,7 @@ struct AppState {
     running: bool,
     session_id: Option<u64>,
     scroll_offset: usize,
+    cursor_visible: bool,
 }
 
 impl AppState {
@@ -76,6 +78,7 @@ impl AppState {
             running: true,
             session_id: None,
             scroll_offset: 0,
+            cursor_visible: true,
         })
     }
 
@@ -85,8 +88,11 @@ impl AppState {
                 self.execute_command();
             }
             KeyCode::Char(c) => {
-                self.input.insert(self.cursor_position, c);
-                self.move_cursor_right();
+                // Filter out control characters
+                if !c.is_control() {
+                    self.input.insert(self.cursor_position, c);
+                    self.move_cursor_right();
+                }
             }
             KeyCode::Backspace => {
                 if self.cursor_position > 0 {
@@ -150,18 +156,15 @@ impl AppState {
             return;
         }
 
-        // Add command to output as if it was typed (like real terminal)
+        // Add command to output
         self.output.push(OutputLine::normal(format!("{} {}", INPUT_PROMPT, command)));
 
-        // Check for builtin commands
         if command.starts_with(':') {
             self.handle_builtin(&command);
         } else {
             match self.ensure_session() {
                 Ok(session) => match self.core.exec_with_session(session, command) {
-                    Ok(_task_id) => {
-                        // Task started, will poll for output
-                    }
+                    Ok(_task_id) => {}
                     Err(e) => {
                         self.output.push(OutputLine::error(format!("Error: {}", e)));
                     }
@@ -270,9 +273,7 @@ impl AppState {
             if let Ok(events) = self.core.tick_session(session) {
                 for event in events {
                     match event {
-                        SessionEvent::SessionStarted(id) => {
-                            // Silent
-                        }
+                        SessionEvent::SessionStarted(_id) => {}
                         SessionEvent::Output(chunk) => {
                             if chunk.is_stderr {
                                 self.output.push(OutputLine::error(chunk.text));
@@ -280,8 +281,7 @@ impl AppState {
                                 self.output.push(OutputLine::normal(chunk.text));
                             }
                         }
-                        SessionEvent::TaskUpdated { task_id, status } => {
-                            // Only show errors
+                        SessionEvent::TaskUpdated { task_id: _, status } => {
                             if let TaskStatus::Exited(code) = status {
                                 if code != 0 {
                                     self.output.push(OutputLine::system(format!(
@@ -308,16 +308,10 @@ impl AppState {
 fn draw_ui(f: &mut Frame, state: &mut AppState) {
     let size = f.size();
 
-    // Terminal style: full area for output + input
-    let main_area = size;
-
-    // Calculate how many lines we can show
-    let visible_lines = (main_area.height as usize).saturating_sub(2); // Leave space for input
-
-    // Build terminal content (output lines + current input)
+    // Build terminal content
     let mut terminal_lines: Vec<Line> = Vec::new();
 
-    // Add output lines (from scroll offset)
+    // Add output lines
     for line in state.output.iter().skip(state.scroll_offset) {
         let style = if line.is_error {
             Style::default().fg(Color::Red)
@@ -329,18 +323,28 @@ fn draw_ui(f: &mut Frame, state: &mut AppState) {
         terminal_lines.push(Line::from(vec![Span::styled(&line.text, style)]));
     }
 
-    // Add current input line
+    // Build input line with visible cursor
+    let before_cursor = &state.input[..state.cursor_position];
+    let after_cursor = if state.cursor_position < state.input.len() {
+        &state.input[state.cursor_position..]
+    } else {
+        ""
+    };
+
     let input_line = vec![
         Span::styled(INPUT_PROMPT, Style::default().fg(Color::Green)),
         Span::raw(" "),
-        Span::raw(&state.input),
+        Span::raw(before_cursor),
+        Span::styled("▌", Style::default().fg(Color::White)), // Visible cursor
+        Span::raw(after_cursor),
     ];
     terminal_lines.push(Line::from(input_line));
 
-    // Render as a single paragraph (like a real terminal)
+    // Render
     let terminal = Paragraph::new(terminal_lines)
+        .wrap(Wrap { trim: false })
         .style(Style::default().bg(Color::Black).fg(Color::White));
-    f.render_widget(terminal, main_area);
+    f.render_widget(terminal, size);
 }
 
 fn run_app(
@@ -349,6 +353,9 @@ fn run_app(
 ) -> Result<()> {
     let mut last_tick = std::time::Instant::now();
     let tick_rate = Duration::from_millis(100);
+
+    // Set cursor style to blinking block
+    execute!(terminal.backend_mut(), SetCursorStyle::BlinkingBlock)?;
 
     while state.running {
         terminal.draw(|f| draw_ui(f, &mut state))?;
@@ -381,7 +388,7 @@ fn main() -> Result<()> {
 
     enable_raw_mode()?;
     let mut stdout = io::stdout();
-    execute!(stdout, EnterAlternateScreen, EnableMouseCapture)?;
+    execute!(stdout, EnterAlternateScreen)?;
     let backend = CrosstermBackend::new(stdout);
     let mut terminal = Terminal::new(backend)?;
 
@@ -392,8 +399,7 @@ fn main() -> Result<()> {
     disable_raw_mode()?;
     execute!(
         terminal.backend_mut(),
-        LeaveAlternateScreen,
-        DisableMouseCapture
+        LeaveAlternateScreen
     )?;
 
     result?;
