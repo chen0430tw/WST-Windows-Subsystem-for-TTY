@@ -1,0 +1,1 @@
+C:\Users\Administrator\Desktop\research\WST_Skeleton\target\release\libwst_config.rlib: C:\Users\Administrator\Desktop\research\WST_Skeleton\crates\wst-config\src\lib.rs C:\Users\Administrator\Desktop\research\WST_Skeleton\crates\wst-protocol\src\lib.rs

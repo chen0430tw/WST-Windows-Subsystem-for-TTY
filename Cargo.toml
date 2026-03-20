@@ -1,0 +1,25 @@
+[workspace]
+resolver = "2"
+members = [
+    "apps/wst-ui",
+    "crates/wst-core",
+    "crates/wst-backend",
+    "crates/wst-protocol",
+    "crates/wst-config",
+    "crates/wst-hotkey",
+]
+
+[workspace.package]
+edition = "2021"
+version = "0.1.0"
+license = "MIT"
+authors = ["Chen 430"]
+
+[workspace.dependencies]
+anyhow = "1"
+thiserror = "1"
+serde = { version = "1", features = ["derive"] }
+toml = "0.8"
+ratatui = "0.26"
+crossterm = "0.27"
+tracing = "0.1"

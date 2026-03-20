@@ -1,0 +1,4 @@
+default_backend = "Cygctl"
+cygctl_path = "./cygctl.exe"
+fullscreen = true
+hotkey = "Ctrl+Alt+Space"

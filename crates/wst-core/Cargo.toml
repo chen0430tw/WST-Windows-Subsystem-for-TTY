@@ -1,0 +1,13 @@
+[package]
+name = "wst-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+
+wst-backend = { path = "../wst-backend" }
+wst-config = { path = "../wst-config" }
+wst-protocol = { path = "../wst-protocol" }
