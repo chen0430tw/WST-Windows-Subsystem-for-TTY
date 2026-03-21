@@ -1,1 +1,1 @@
-C:\Users\Administrator\Desktop\research\WST_Skeleton\target\release\libwst_backend.rlib: C:\Users\Administrator\Desktop\research\WST_Skeleton\crates\wst-backend\src\lib.rs C:\Users\Administrator\Desktop\research\WST_Skeleton\crates\wst-protocol\src\lib.rs
+C:\Users\Administrator\WST\target\release\libwst_backend.rlib: C:\Users\Administrator\WST\crates\wst-backend\src\lib.rs C:\Users\Administrator\WST\crates\wst-protocol\src\lib.rs

@@ -1,0 +1,3390 @@
+DEBUG: CmdBackend::reset
+DEBUG: CmdBackend::spawn_session
+DEBUG: CmdBackend::exec - session=1, task=1, command=dir
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 1 tasks in session
+DEBUG: task 1 stdout_reader: true
+DEBUG: stdout read 34 bytes, raw: " Volume in drive C has no label.\r\n", trimmed: " Volume in drive C has no label."
+DEBUG: stdout read 36 bytes, raw: " Volume Serial Number is 45A8-71F9\r\n", trimmed: " Volume Serial Number is 45A8-71F9"
+DEBUG: stdout read 2 bytes, raw: "\r\n", trimmed: ""
+DEBUG: stdout read 55 bytes, raw: " Directory of C:\\Users\\Administrator\\WST\\target\\debug\r\n", trimmed: " Directory of C:\\Users\\Administrator\\WST\\target\\debug"
+DEBUG: stdout read 2 bytes, raw: "\r\n", trimmed: ""
+DEBUG: stdout read 46 bytes, raw: "2026/03/21  上午 07:32    <DIR>          .\r\n", trimmed: "2026/03/21  上午 07:32    <DIR>          ."
+DEBUG: stdout read 47 bytes, raw: "2026/03/21  上午 07:32    <DIR>          ..\r\n", trimmed: "2026/03/21  上午 07:32    <DIR>          .."
+DEBUG: stdout read 56 bytes, raw: "2026/03/21  上午 07:10                 0 .cargo-lock\r\n", trimmed: "2026/03/21  上午 07:10                 0 .cargo-lock"
+DEBUG: stdout read 57 bytes, raw: "2026/03/21  上午 07:10    <DIR>          .fingerprint\r\n", trimmed: "2026/03/21  上午 07:10    <DIR>          .fingerprint"
+DEBUG: stdout read 50 bytes, raw: "2026/03/21  上午 07:10    <DIR>          build\r\n", trimmed: "2026/03/21  上午 07:10    <DIR>          build"
+DEBUG: stdout read 49 bytes, raw: "2026/03/21  上午 07:32    <DIR>          deps\r\n", trimmed: "2026/03/21  上午 07:32    <DIR>          deps"
+DEBUG: stdout read 53 bytes, raw: "2026/03/21  上午 07:10    <DIR>          examples\r\n", trimmed: "2026/03/21  上午 07:10    <DIR>          examples"
+DEBUG: stdout read 56 bytes, raw: "2026/03/21  上午 07:10    <DIR>          incremental\r\n", trimmed: "2026/03/21  上午 07:10    <DIR>          incremental"
+DEBUG: stdout read 61 bytes, raw: "2026/03/21  上午 07:32               176 libwst_backend.d\r\n", trimmed: "2026/03/21  上午 07:32               176 libwst_backend.d"
+DEBUG: stdout read 64 bytes, raw: "2026/03/21  上午 07:32         3,332,372 libwst_backend.rlib\r\n", trimmed: "2026/03/21  上午 07:32         3,332,372 libwst_backend.rlib"
+DEBUG: stdout read 60 bytes, raw: "2026/03/21  上午 07:32               174 libwst_config.d\r\n", trimmed: "2026/03/21  上午 07:32               174 libwst_config.d"
+DEBUG: stdout read 63 bytes, raw: "2026/03/21  上午 07:10         2,823,444 libwst_config.rlib\r\n", trimmed: "2026/03/21  上午 07:10         2,823,444 libwst_config.rlib"
+DEBUG: stdout read 58 bytes, raw: "2026/03/21  上午 07:32               283 libwst_core.d\r\n", trimmed: "2026/03/21  上午 07:32               283 libwst_core.d"
+DEBUG: stdout read 61 bytes, raw: "2026/03/21  上午 07:32           944,970 libwst_core.rlib\r\n", trimmed: "2026/03/21  上午 07:32           944,970 libwst_core.rlib"
+DEBUG: stdout read 60 bytes, raw: "2026/03/21  上午 07:10               116 libwst_hotkey.d\r\n", trimmed: "2026/03/21  上午 07:10               116 libwst_hotkey.d"
+DEBUG: stdout read 63 bytes, raw: "2026/03/21  上午 07:10            32,710 libwst_hotkey.rlib\r\n", trimmed: "2026/03/21  上午 07:10            32,710 libwst_hotkey.rlib"
+DEBUG: stdout read 62 bytes, raw: "2026/03/21  上午 07:10               120 libwst_protocol.d\r\n", trimmed: "2026/03/21  上午 07:10               120 libwst_protocol.d"
+DEBUG: stdout read 65 bytes, raw: "2026/03/21  上午 07:10           177,390 libwst_protocol.rlib\r\n", trimmed: "2026/03/21  上午 07:10           177,390 libwst_protocol.rlib"
+DEBUG: stdout read 53 bytes, raw: "2026/03/21  上午 07:32               438 wst-ui.d\r\n", trimmed: "2026/03/21  上午 07:32               438 wst-ui.d"
+DEBUG: stdout read 55 bytes, raw: "2026/03/21  上午 07:32         3,367,424 wst-ui.exe\r\n", trimmed: "2026/03/21  上午 07:32         3,367,424 wst-ui.exe"
+DEBUG: stdout read 55 bytes, raw: "2026/03/21  上午 07:32        34,254,848 wst_ui.pdb\r\n", trimmed: "2026/03/21  上午 07:32        34,254,848 wst_ui.pdb"
+DEBUG: stdout read 47 bytes, raw: "              14 File(s)     44,934,465 bytes\r\n", trimmed: "              14 File(s)     44,934,465 bytes"
+DEBUG: stdout read 52 bytes, raw: "               7 Dir(s)  52,338,597,888 bytes free\r\n", trimmed: "               7 Dir(s)  52,338,597,888 bytes free"
+DEBUG: task 1 has child: true
+DEBUG: task 1 still running
+DEBUG: removing 0 completed tasks
+DEBUG: returning 28 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 1 tasks in session
+DEBUG: task 1 stdout_reader: true
+DEBUG: task 1 has child: true
+DEBUG: task 1 still running
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 1 tasks in session
+DEBUG: task 1 stdout_reader: true
+DEBUG: task 1 has child: true
+DEBUG: task 1 still running
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 1 tasks in session
+DEBUG: task 1 stdout_reader: true
+DEBUG: task 1 has child: true
+DEBUG: task 1 still running
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 1 tasks in session
+DEBUG: task 1 stdout_reader: true
+DEBUG: task 1 has child: true
+DEBUG: task 1 still running
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 1 tasks in session
+DEBUG: task 1 stdout_reader: true
+DEBUG: task 1 has child: true
+DEBUG: task 1 still running
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 1 tasks in session
+DEBUG: task 1 stdout_reader: true
+DEBUG: task 1 has child: true
+DEBUG: task 1 still running
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 1 tasks in session
+DEBUG: task 1 stdout_reader: true
+DEBUG: task 1 has child: true
+DEBUG: task 1 still running
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 1 tasks in session
+DEBUG: task 1 stdout_reader: true
+DEBUG: task 1 has child: true
+DEBUG: task 1 exited with Some(0)
+DEBUG: removing 1 completed tasks
+DEBUG: returning 1 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events
+DEBUG: CmdBackend::poll_events - session=1
+DEBUG: 0 tasks in session
+DEBUG: removing 0 completed tasks
+DEBUG: returning 0 events

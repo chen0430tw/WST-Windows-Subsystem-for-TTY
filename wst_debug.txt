@@ -1,0 +1,27 @@
+=== WST Debug ===
+Current PID: 260400
+WT_SESSION env: Err(NotPresent)
+fullscreen_enabled: true
+is_windows_terminal(): false
+Will send Alt+Enter: true
+=== WST Debug ===
+Current PID: 261936
+WT_SESSION env: Ok("d02cb5f4-8419-49a9-a902-c3acd8f91230")
+fullscreen_enabled: true
+is_windows_terminal(): true
+Will send Alt+Enter: false
+=== WST Debug ===
+Current PID: 261904
+WT_SESSION env: Err(NotPresent)
+fullscreen_enabled: true
+is_windows_terminal(): false
+Will send Alt+Enter: true
+set_console_fullscreen() called, sleeping 100ms...
+About to send Alt+Enter inputs...
+send_inputs() result: 4 inputs sent
+=== WST Debug ===
+Current PID: 261196
+WT_SESSION env: Ok("245756ab-3475-4cdb-bb42-59d73c3d134c")
+fullscreen_enabled: true
+is_windows_terminal(): true
+Will send Alt+Enter: false

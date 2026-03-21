@@ -1,0 +1,54 @@
+=== WST Debug Start ===
+Args: ["C:\\Users\\Administrator\\WST\\target\\release\\wst-ui.exe"]
+Config fullscreen: true
+fullscreen_enabled: true
+WT_SESSION: Ok("ea7e3d99-a750-48c8-928e-e432419b9a22")
+Windows Terminal detected - skipping auto-fullscreen
+Alt+Enter sent, result: 4
+Number of inputs: 4
+Alt+Enter sent, result: 4
+Number of inputs: 4
+Parent process: explorer.exe
+Alt+Enter sent, result: 4
+Number of inputs: 4
+Parent process: WindowsTerminal.exe
+Skipping Alt+Enter (Windows Terminal detected)
+Parent process: explorer.exe
+Alt+Enter sent, result: 4
+Number of inputs: 4
+Parent process: WindowsTerminal.exe
+Skipping Alt+Enter (Windows Terminal detected)
+Parent process: WindowsTerminal.exe
+Skipping Alt+Enter (Windows Terminal detected)
+Parent process: explorer.exe
+Alt+Enter sent, result: 4
+Number of inputs: 4
+Parent process: WindowsTerminal.exe
+Using F11 for Windows Terminal
+Parent process: explorer.exe
+Alt+Enter sent, result: 4
+Number of inputs: 4
+Parent process: WindowsTerminal.exe
+Using F11 for Windows Terminal
+Parent process: WindowsTerminal.exe
+Using F11 for Windows Terminal
+set_windows_terminal_fullscreen: F11 sent
+Parent process: explorer.exe
+Alt+Enter sent, result: 4
+Number of inputs: 4
+set_windows_terminal_fullscreen: F11 sent
+Parent process: WindowsTerminal.exe
+Using F11 for Windows Terminal
+set_windows_terminal_fullscreen: F11 sent
+Parent process: WindowsTerminal.exe
+Using F11 for Windows Terminal
+set_windows_terminal_fullscreen: F11 sent
+Parent process: explorer.exe
+Alt+Enter sent, result: 4
+Number of inputs: 4
+set_windows_terminal_fullscreen: F11 sent
+Parent process: WindowsTerminal.exe
+Windows Terminal detected - F11 already sent, skipping
+set_windows_terminal_fullscreen: F11 sent
+Parent process: WindowsTerminal.exe
+Windows Terminal detected - F11 already sent, skipping
