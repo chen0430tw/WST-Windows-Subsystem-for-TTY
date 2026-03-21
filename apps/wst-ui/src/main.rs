@@ -3,7 +3,7 @@ mod builtin;
 use anyhow::Result;
 use unicode_width::UnicodeWidthChar;
 use crossterm::{
-    event::{self, Event, KeyCode, KeyEvent, KeyModifiers, KeyEventKind, MouseEvent},
+    event::{self, Event, KeyCode, KeyEvent, KeyModifiers, KeyEventKind},
     execute,
     terminal::{disable_raw_mode, enable_raw_mode, EnterAlternateScreen, LeaveAlternateScreen},
 };
@@ -132,7 +132,11 @@ impl AppState {
             KeyCode::Right => self.move_cursor_right(),
             KeyCode::Home => self.cursor_position = 0,
             KeyCode::End => self.cursor_position = self.input.len(),
-            KeyCode::Up => {
+            // Up/Down now scroll output (WT converts mouse wheel to these keys)
+            KeyCode::Up => self.scroll_output_up(3),
+            KeyCode::Down => self.scroll_output_down(3),
+            // Ctrl+P/N for command history
+            KeyCode::Char('p') | KeyCode::Char('P') if key.modifiers.contains(KeyModifiers::CONTROL) => {
                 if let Ok(mut core) = self.core.try_lock() {
                     if let Some(cmd) = core.history_prev() {
                         self.input = cmd;
@@ -140,7 +144,7 @@ impl AppState {
                     }
                 }
             }
-            KeyCode::Down => {
+            KeyCode::Char('n') | KeyCode::Char('N') if key.modifiers.contains(KeyModifiers::CONTROL) => {
                 if let Ok(mut core) = self.core.try_lock() {
                     if let Some(cmd) = core.history_next() {
                         self.input = cmd;
@@ -158,21 +162,9 @@ impl AppState {
                     core.history_reset();
                 }
             }
-            KeyCode::PageUp => self.scroll_output_up(5),
-            KeyCode::PageDown => self.scroll_output_down(5),
+            KeyCode::PageUp => self.scroll_output_up(10),
+            KeyCode::PageDown => self.scroll_output_down(10),
             _ => {}
-        }
-    }
-
-    fn handle_mouse(&mut self, event: MouseEvent) {
-        // Handle mouse wheel scroll
-        use crossterm::event::MouseEventKind;
-        match event.kind {
-            MouseEventKind::ScrollUp => self.scroll_output_up(3),
-            MouseEventKind::ScrollDown => self.scroll_output_down(3),
-            _ => {
-                // Ignore other mouse events to allow text selection
-            }
         }
     }
 
@@ -261,6 +253,11 @@ impl AppState {
                 self.output.push(OutputLine::normal("  :backend     - Switch backend (Cygctl|Pwsh|Cmd)"));
                 self.output.push(OutputLine::normal("  :debug       - Toggle debug mode"));
                 self.output.push(OutputLine::normal("  :exit / :q   - Exit WST"));
+                self.output.push(OutputLine::normal(""));
+                self.output.push(OutputLine::system("Keyboard shortcuts:"));
+                self.output.push(OutputLine::normal("  PageUp/Down  - Scroll output"));
+                self.output.push(OutputLine::normal("  Mouse wheel  - Scroll output"));
+                self.output.push(OutputLine::normal("  Shift+Drag   - Select text (Windows Terminal)"));
             }
             ":status" => {
                 if let Ok(core) = self.core.try_lock() {
@@ -542,8 +539,8 @@ fn run_app(
     let (tx, mut rx) = mpsc::unbounded_channel();
     let core_clone = state.core.clone();
 
-    // Don't enable mouse capture - allows text selection in Windows Terminal
-    // Wheel events still work without capture mode
+    // Don't enable mouse capture - let WT handle text selection naturally
+    // Mouse wheel is converted to Up/Down keys by WT's Alternate Scroll Mode
 
     let rt = tokio::runtime::Runtime::new()?;
     rt.spawn(run_event_loop(core_clone, tx));
@@ -609,7 +606,6 @@ fn run_app(
                         _ => state.handle_input(key),
                     }
                 }
-                Event::Mouse(mouse) => state.handle_mouse(mouse),
                 _ => {}
             }
         }

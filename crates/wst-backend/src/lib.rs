@@ -450,7 +450,6 @@ impl Backend for CygctlBackend {
         let task_id = self.next_task;
         self.next_task += 1;
 
-
         // Use cygctl to execute the command: cygctl exec <command>
         let child = Command::new(&self.cygctl_path)
             .args(["exec", &req.command_line])
@@ -459,14 +458,19 @@ impl Backend for CygctlBackend {
             .spawn();
 
         let task = match child {
-            Ok(c) => Task {
-                child: Some(c),
-                status: TaskStatus::Running,
-                output_buffer: Vec::new(),
-                error_buffer: Vec::new(),
-                stdout_reader: None,
-                stderr_reader: None,
-            },
+            Ok(mut c) => {
+                // Take stdout and stderr to prevent buffer from filling up
+                let stdout = c.stdout.take().map(BufReader::new);
+                let stderr = c.stderr.take().map(BufReader::new);
+                Task {
+                    child: Some(c),
+                    status: TaskStatus::Running,
+                    output_buffer: Vec::new(),
+                    error_buffer: Vec::new(),
+                    stdout_reader: stdout,
+                    stderr_reader: stderr,
+                }
+            }
             Err(e) => {
                 // If cygctl is not found, create a task that will immediately fail
                 let task = Task {
@@ -509,69 +513,96 @@ impl Backend for CygctlBackend {
 
         if let Some(tasks) = self.sessions.get_mut(&session) {
             for (&task_id, task) in tasks.iter_mut() {
-                if let Some(mut child) = task.child.take() {
-                    if let Some(exit_status) = child.try_wait()? {
-                        // Process completed
-                        if let Some(stdout) = child.stdout {
-                            let reader = BufReader::new(stdout);
-                            for line in reader.lines().flatten() {
-                                task.output_buffer.push(line);
-                            }
-                        }
-                        if let Some(stderr) = child.stderr {
-                            let reader = BufReader::new(stderr);
-                            for line in reader.lines().flatten() {
-                                task.error_buffer.push(line);
-                            }
-                        }
-
-                        let status = if exit_status.success() {
-                            TaskStatus::Exited(0)
-                        } else {
-                            TaskStatus::Exited(exit_status.code().unwrap_or(1))
-                        };
-
-                        task.status = status;
-
-                        for line in &task.output_buffer {
-                            result.push(SessionEvent::Output(OutputChunk {
-                                task_id: task_id,
-                                is_stderr: false,
-                                text: line.clone(),
-                            }));
-                        }
-                        for line in &task.error_buffer {
-                            result.push(SessionEvent::Output(OutputChunk {
-                                task_id: task_id,
-                                is_stderr: true,
-                                text: line.clone(),
-                            }));
-                        }
-
-                        result.push(SessionEvent::TaskUpdated {
-                            task_id: task_id,
-                            status,
-                        });
-
-                        completed_tasks.push(task_id);
-                    } else {
-                        task.child = Some(child);
-                    }
-                } else if task.status == TaskStatus::Failed {
-                    // Send pending error events
-                    for line in &task.error_buffer {
+                // First, read all available output from stdout/stderr (real-time)
+                if let Some(ref mut reader) = task.stdout_reader {
+                    use std::io::BufRead;
+                    let mut buf = String::new();
+                    while reader.read_line(&mut buf).unwrap_or(0) > 0 {
+                        let line = buf.trim_end().trim_end_matches('\r').to_string();
+                        task.output_buffer.push(line.clone());
                         result.push(SessionEvent::Output(OutputChunk {
-                            task_id,
-                            is_stderr: true,
-                            text: line.clone(),
+                            task_id: task_id,
+                            is_stderr: false,
+                            text: line,
                         }));
+                        buf.clear();
                     }
-                    result.push(SessionEvent::TaskUpdated {
-                        task_id,
-                        status: TaskStatus::Exited(1),
-                    });
-                    task.status = TaskStatus::Exited(1);
-                    completed_tasks.push(task_id);
+                }
+                if let Some(ref mut reader) = task.stderr_reader {
+                    use std::io::BufRead;
+                    let mut buf = String::new();
+                    while reader.read_line(&mut buf).unwrap_or(0) > 0 {
+                        let line = buf.trim_end().trim_end_matches('\r').to_string();
+                        task.error_buffer.push(line.clone());
+                        result.push(SessionEvent::Output(OutputChunk {
+                            task_id: task_id,
+                            is_stderr: true,
+                            text: line,
+                        }));
+                        buf.clear();
+                    }
+                }
+
+                // Then check if process has exited
+                if let Some(mut child) = task.child.take() {
+                    match child.try_wait() {
+                        Ok(Some(exit_status)) => {
+                            // Read any remaining output after process exits
+                            if let Some(mut reader) = task.stdout_reader.take() {
+                                use std::io::BufRead;
+                                let mut buf = String::new();
+                                while reader.read_line(&mut buf).unwrap_or(0) > 0 {
+                                    let line = buf.trim_end().trim_end_matches('\r').to_string();
+                                    if !line.is_empty() {
+                                        task.output_buffer.push(line.clone());
+                                        result.push(SessionEvent::Output(OutputChunk {
+                                            task_id: task_id,
+                                            is_stderr: false,
+                                            text: line,
+                                        }));
+                                    }
+                                    buf.clear();
+                                }
+                            }
+                            if let Some(mut reader) = task.stderr_reader.take() {
+                                use std::io::BufRead;
+                                let mut buf = String::new();
+                                while reader.read_line(&mut buf).unwrap_or(0) > 0 {
+                                    let line = buf.trim_end().trim_end_matches('\r').to_string();
+                                    if !line.is_empty() {
+                                        task.error_buffer.push(line.clone());
+                                        result.push(SessionEvent::Output(OutputChunk {
+                                            task_id: task_id,
+                                            is_stderr: true,
+                                            text: line,
+                                        }));
+                                    }
+                                    buf.clear();
+                                }
+                            }
+
+                            let status = if exit_status.success() {
+                                TaskStatus::Exited(0)
+                            } else {
+                                TaskStatus::Exited(exit_status.code().unwrap_or(1))
+                            };
+
+                            task.status = status;
+
+                            result.push(SessionEvent::TaskUpdated {
+                                task_id: task_id,
+                                status,
+                            });
+
+                            completed_tasks.push(task_id);
+                        }
+                        Ok(None) => {
+                            task.child = Some(child);
+                        }
+                        Err(_) => {
+                            task.child = Some(child);
+                        }
+                    }
                 }
             }
 
