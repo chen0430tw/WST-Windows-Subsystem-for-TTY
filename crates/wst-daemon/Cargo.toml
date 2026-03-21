@@ -17,11 +17,14 @@ serde_json = "1"
 tokio.workspace = true
 tracing.workspace = true
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tracing-appender = "0.2"
 wst-protocol = { path = "../wst-protocol" }
 wst-config = { path = "../wst-config" }
 wst-session = { path = "../wst-session" }
 wst-hotkey = { path = "../wst-hotkey" }
 wst-backend = { path = "../wst-backend" }
+win-hotkeys = "0.5.1"
+winput = "0.2"
 
 [target.'cfg(windows)'.dependencies]
 windows = { workspace = true, features = [
@@ -32,5 +35,6 @@ windows = { workspace = true, features = [
     "Win32_System_Diagnostics_ToolHelp",
     "Win32_System_Threading",
     "Win32_System_Pipes",
+    "Win32_System_LibraryLoader",
 ] }
 interprocess = "2.2"

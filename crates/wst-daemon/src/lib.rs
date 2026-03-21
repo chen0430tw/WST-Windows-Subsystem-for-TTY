@@ -12,9 +12,12 @@ pub mod lifecycle;
 
 use anyhow::Result;
 use std::sync::Arc;
-use tokio::sync::RwLock;
+use tokio::sync::{mpsc, RwLock};
 use wst_config::WstConfig;
 use wst_session::{SessionManager, SessionManagerConfig};
+
+/// Hotkey event channel capacity
+const HOTKEY_CHANNEL_CAPACITY: usize = 32;
 
 /// Daemon state shared across components
 pub struct DaemonState {
@@ -97,12 +100,40 @@ impl WstDaemon {
     pub async fn run(&self) -> Result<()> {
         tracing::info!("WST Daemon starting...");
 
+        // Create hotkey event channel
+        let (hotkey_tx, hotkey_rx) = mpsc::channel(HOTKEY_CHANNEL_CAPACITY);
+
+        // Start global hotkey listener in background thread
+        let hotkey_config = match &self.state.config.hotkey_global {
+            Some(s) => hotkey::HotkeyConfig::parse(s).unwrap_or_else(|_| hotkey::HotkeyConfig::default_wst_hotkey()),
+            None => hotkey::HotkeyConfig::default_wst_hotkey(),
+        };
+
+        let _hotkey_handle = hotkey::start_hotkey_thread(hotkey_config, hotkey_tx)?;
+
+        // Spawn hotkey event handler task
+        let state = self.state.clone();
+        tokio::spawn(async move {
+            if let Err(e) = hotkey::run_hotkey_listener(state, hotkey_rx).await {
+                tracing::error!("Hotkey listener error: {}", e);
+            }
+        });
+
         // Restore previous sessions
         if let Err(e) = self.restore_sessions().await {
             tracing::warn!("Failed to restore sessions: {}", e);
         }
 
+        // Start IPC server
+        let ipc_state = self.state.clone();
+        tokio::spawn(async move {
+            if let Err(e) = ipc::run_ipc_server(ipc_state).await {
+                tracing::error!("IPC server error: {}", e);
+            }
+        });
+
         tracing::info!("WST Daemon running (press Ctrl+C to stop)");
+        tracing::info!("Global hotkey: Ctrl+Alt+F12 (configurable)");
 
         // Wait for shutdown signal
         tokio::select! {

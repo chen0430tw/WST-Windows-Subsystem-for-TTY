@@ -3,7 +3,7 @@ use serde::{Deserialize, Serialize};
 pub type SessionId = u64;
 pub type TaskId = u64;
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
 pub enum BackendKind {
     Cygctl,
     Pwsh,

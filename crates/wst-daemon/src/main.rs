@@ -102,22 +102,55 @@ async fn main() -> Result<()> {
     // Create and run daemon
     let daemon = WstDaemon::new(config)?;
 
+    println!();
+    println!("========================================");
+    println!("WST Daemon starting...");
+    println!("Global hotkey: Ctrl+Alt+F12");
+    println!("========================================");
+    println!();
+
     tracing::info!("Starting WST daemon");
     daemon.run().await?;
 
     Ok(())
 }
 
-/// Initialize logging
+/// Initialize logging to file and console
 fn init_logging() {
     use tracing_subscriber::fmt;
+    use tracing_subscriber::prelude::*;
+    use tracing_appender::non_blocking;
 
-    fmt()
-        .with_target(false)
-        .with_thread_ids(false)
-        .with_file(false)
-        .with_line_number(false)
-        .init();
+    // Create log file in project directory
+    let log_file = std::fs::File::create("wst-daemon.log")
+        .expect("Failed to create log file");
+    let (non_blocking, _guard) = non_blocking(log_file);
+
+    // Set up subscriber with both console and file output
+    let subscriber = tracing_subscriber::registry()
+        .with(
+            fmt::layer()
+                .with_writer(std::io::stdout)
+                .with_target(false)
+                .with_thread_ids(false)
+                .with_file(false)
+                .with_line_number(false)
+                .with_ansi(false)
+        )
+        .with(
+            fmt::layer()
+                .with_writer(non_blocking)
+                .with_target(false)
+                .with_thread_ids(false)
+                .with_file(false)
+                .with_line_number(false)
+                .with_ansi(false)
+        );
+
+    subscriber.init();
+
+    // Keep the guard alive for the lifetime of the program
+    std::mem::forget(_guard);
 }
 
 /// Print usage information
@@ -136,7 +169,7 @@ fn print_usage() {
     println!("  --help, -h      Show this help message");
     println!();
     println!("The daemon will:");
-    println!("  - Register global hotkey for WST");
+    println!("  - Register global hotkey (Ctrl+Alt+F12) for WST");
     println!("  - Manage session persistence");
     println!("  - Keep backend processes alive");
     println!("  - Communicate with frontend via IPC");

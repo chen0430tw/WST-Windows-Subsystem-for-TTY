@@ -35,14 +35,14 @@ impl Default for WstConfig {
             default_backend: BackendKind::Cmd,
             cygctl_path: "./cygctl.exe".to_string(),
             fullscreen: true,
-            hotkey: "Ctrl+Alt+Space".to_string(),
+            hotkey: "Ctrl+Alt+F12".to_string(),
 
             // Second stage defaults
             daemon_autostart: Some(true),
             daemon_persist_backend: Some(true),
             daemon_max_sessions: Some(10),
             daemon_snapshot_interval: Some(300),
-            hotkey_global: Some("Ctrl+Alt+Space".to_string()),
+            hotkey_global: Some("Ctrl+Alt+F12".to_string()),
             session_restore_on_startup: Some(true),
         }
     }
